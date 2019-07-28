@@ -15,18 +15,16 @@ const SubmitNewSong = styled.input`
   padding: 10px;
   `;
 
+// COMPONENT
 const NewSongForm = (props) => {
-  // ********** CODE *************
+  
   const [title, setTitle] = useState('')
   
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(title);
+    props.newsong(title);
+    setTitle('');
   }
-
-
-
-  // ********** Styles *************
   
   
   return (
